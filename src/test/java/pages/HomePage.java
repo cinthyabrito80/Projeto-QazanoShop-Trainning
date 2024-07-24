@@ -9,7 +9,7 @@ public class HomePage extends Utils {
 
     WebDriver driver;
     private By logo_home = By.xpath("//*[@href='index.html']");
-    private By link_login = By.xpath("//*[text()='  Login']");
+    private By link_login = By.xpath("//*[text()=' Login']");
     private By link_cadastro = By.xpath("//*[text()=' Cadastro']");
 
 
