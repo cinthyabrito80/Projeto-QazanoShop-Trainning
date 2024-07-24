@@ -22,11 +22,14 @@ public class RunCucumberTest {
 
     @BeforeClass
     public static void start(){
+        System.out.println("Iniciou");
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
     }
 
     @AfterClass
     public static void stop(){
+        System.out.println("Finalizou");
         driver.quit();
     }
 
