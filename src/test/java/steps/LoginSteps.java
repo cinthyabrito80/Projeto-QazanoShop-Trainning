@@ -9,8 +9,8 @@ import runner.RunCucumberTest;
 
 public class LoginSteps extends RunCucumberTest {
 
-    HomePage homePage = new HomePage(driver);
-    LoginPage loginPage = new LoginPage(driver);
+    HomePage homePage = new HomePage();
+    LoginPage loginPage = new LoginPage();
 
     @Dado("acesso login")
     public void acesso_login() {

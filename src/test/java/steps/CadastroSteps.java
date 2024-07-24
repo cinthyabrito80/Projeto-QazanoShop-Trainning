@@ -9,8 +9,8 @@ import runner.RunCucumberTest;
 
 public class CadastroSteps extends RunCucumberTest {
 
-    HomePage homePage = new HomePage(driver);
-    CadastroPage cadastroPage = new CadastroPage(driver);
+    HomePage homePage = new HomePage();
+    CadastroPage cadastroPage = new CadastroPage();
 
     @Dado("acesso cadastro de usuário")
     public void acesso_cadastro_de_usuário() {

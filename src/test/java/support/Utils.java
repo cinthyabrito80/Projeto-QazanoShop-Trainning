@@ -10,20 +10,19 @@ import java.util.Random;
 
 public class Utils extends RunCucumberTest {
 
-    Faker faker = new Faker();
+    static Faker faker = new Faker();
 
-    public void esperarElementoVisivel(By element, int tempo) {
-        WebDriverWait wait = new WebDriverWait(driver,tempo);
+    public static void esperarElementoVisivel(By element, int tempo) {
+        WebDriverWait wait = new WebDriverWait(getDriver(),tempo);
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
-    public String getName() {
+    public static String getName() {
         String name = faker.name().fullName();
-
         return name;
     }
 
-    public String getEmail() {
+    public static String getEmail() {
         String email_init = "teste_";
         String email_final = "@otlokk.com";
 
@@ -35,7 +34,7 @@ public class Utils extends RunCucumberTest {
         return email_init + resultado + email_final;
     }
 
-    public String getPassword() {
+    public static String getPassword() {
         String password = "senha";
 
         Random random = new Random();
